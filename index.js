@@ -30,12 +30,16 @@ hint - you should be looking at the stage key inside of the objects
 */
 
 //data - this will be the fifadata when you pass in your argument - this is an array
-function getFinals(/* code here */) {
-   /* code here */
+function getFinals(array) {
    //filter here - to filter for the stage of final
-
+const finalStage = array.filter(function(item){
+    return array.Stage === 'Final';
+});
    // returning the array
+   return finalStage;
 }
+
+console.log('Task 2', getFinals(fifaData));
 
 
 
@@ -46,11 +50,11 @@ Use the higher-order function called getYears to do the following:
 3. Return an array called years containing all of the years in the getFinals data set*/
 
 //receive data (fifaData)/ getFinalscb 
-function getYears(/* code here */) {
-    //map through finals cb to get all of the years (item.Year)
+function getYears(array, cb) {
+    const years = getFinals.map(function(item){
+   return item.Year
+});
 
-    //return the array
-    /* code here */
 }
 
 
